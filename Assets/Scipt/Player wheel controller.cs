@@ -6,6 +6,7 @@ public class PlayerWheelController : MonoBehaviour
 {
     public float speed = 10.0f;
     public float rotationSpeed = 50.0f;
+    public Rigidbody rigidbody;
     public InputActionReference wheelAction;
     public InputActionReference gasAction;
 
@@ -30,7 +31,7 @@ public class PlayerWheelController : MonoBehaviour
         }
         else
         {
-            _rotation = -Mathf.Lerp(100,-100,s) * rotationSpeed;
+            _rotation = -Mathf.Lerp(50,-50,s) * rotationSpeed;
         }
         
         print(translation);
@@ -42,8 +43,9 @@ public class PlayerWheelController : MonoBehaviour
         _rotation *= Time.deltaTime;
 
         // Move translation along the object's z-axis
-        transform.Translate(0, 0, translation);
-
+         transform.Translate(0, 0, translation);
+        
+        //move position
         // Rotate around our y-axis
         transform.Rotate(0, _rotation, 0);
     }

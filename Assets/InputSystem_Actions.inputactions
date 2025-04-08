@@ -6,7 +6,7 @@
             "id": "df70fa95-8a34-4494-b137-73ab6b9c7d37",
             "actions": [
                 {
-                    "name": "Move",
+                    "name": "Gas",
                     "type": "Value",
                     "id": "351f2ccd-1f9f-44bf-9bec-d62ac5c5f408",
                     "expectedControlType": "Axis",
@@ -87,24 +87,42 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "turn",
+                    "name": "Steering",
                     "type": "Value",
                     "id": "89840745-ec72-45f5-9237-70b903bfbb0d",
                     "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Switch Direction",
+                    "type": "Button",
+                    "id": "3b1b0f0b-041c-41c8-88cd-a83645956e5d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Brack",
+                    "type": "Button",
+                    "id": "be8fc067-b431-47e7-9627-d3ec042ab54f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
                     "name": "",
                     "id": "978bfe49-cc26-4a3d-ab7b-7d7a29327403",
-                    "path": "<Joystick>/stick/up",
+                    "path": "<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/stick/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "Gas",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -364,11 +382,33 @@
                 {
                     "name": "",
                     "id": "feb29ec2-7243-4443-88d8-3886d210a8cb",
-                    "path": "<DI_Logitech G HUB G920 Driving Force Racing Wheel USB>/X",
+                    "path": "<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/stick/x",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "turn",
+                    "action": "Steering",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f23f01ab-732f-44eb-a63e-bd8984aebf2f",
+                    "path": "<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/button5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Switch Direction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "008f220b-d810-4d8e-a3b9-55e4b0388e98",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Brack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
