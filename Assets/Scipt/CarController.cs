@@ -50,7 +50,7 @@ public class CarController : MonoBehaviour
         } 
         
         
-        if (moveInput == 0)
+        if (moveInput == 0 && breakInput !=0)
         {
             rearLeftCollider.brakeTorque = breakInput * brakeforce;
             rearRightCollider.brakeTorque = breakInput * brakeforce;
