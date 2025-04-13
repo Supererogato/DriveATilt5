@@ -36,7 +36,7 @@ public class CarController : MonoBehaviour
         float breakInput = breakAction.action.ReadValue<float>();
         float reverseInput = reverseAction.action.ReadValue<float>();
         moveInput = Mathf.Lerp(5, 0, moveInput);
-        breakInput = Mathf.Lerp(5, 0, breakInput);
+        breakInput = Mathf.Lerp(0, 5, breakInput);
         
         if (reverseAction.action.ReadValue<float>() != 0)
         {
@@ -50,15 +50,15 @@ public class CarController : MonoBehaviour
         } 
         
         
-        if (moveInput == 0 && breakInput !=0)
-        {
-            rearLeftCollider.brakeTorque = breakInput * brakeforce;
-            rearRightCollider.brakeTorque = breakInput * brakeforce;
-        }
-        else
+        if (breakInput == 0)
         {
             rearLeftCollider.brakeTorque = 0;
             rearRightCollider.brakeTorque = 0;
+        }
+        else
+        {
+            rearLeftCollider.brakeTorque = breakInput * brakeforce;
+            rearRightCollider.brakeTorque = breakInput * brakeforce;
         }
         float steering = steerInput * maxSteeringAngle;
         frontLeftCollider.steerAngle = steering;
