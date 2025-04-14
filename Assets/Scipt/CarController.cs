@@ -10,6 +10,7 @@ public class CarController : MonoBehaviour
     public Transform frontLeftWheel, frontRightWheel, rearLeftWheel, rearRightWheel;
     private Rigidbody rb;
     private MeshCollider mCollider;
+    public string gas;
     public InputActionReference wheelAction;
     public InputActionReference gasAction;
     public InputActionReference breakAction;
@@ -20,6 +21,10 @@ public class CarController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.centerOfMass = new Vector3(0.0f, -.5f, 0.0f);
         mCollider = GetComponent<MeshCollider>();
+        wheelAction.action.Enable();
+        gasAction.action.Enable();
+        breakAction.action.Enable();
+        reverseAction.action.Enable();
     }
 
     // Update is called once per frame
@@ -35,10 +40,10 @@ public class CarController : MonoBehaviour
         float moveInput = gasAction.action.ReadValue<float>();
         float breakInput = breakAction.action.ReadValue<float>();
         float reverseInput = reverseAction.action.ReadValue<float>();
-        moveInput = Mathf.Lerp(5, 0, moveInput);
-        breakInput = Mathf.Lerp(0, 5, breakInput);
-        
-        if (reverseAction.action.ReadValue<float>() != 0)
+        moveInput = Mathf.Lerp(0, 5, moveInput);
+        breakInput = Mathf.Lerp(5, 0, breakInput);
+       
+        if (reverseInput != 0)
         {
             rearLeftCollider.motorTorque = moveInput * -maxMotorTorque;
             rearRightCollider.motorTorque = moveInput * -maxMotorTorque;
@@ -48,18 +53,10 @@ public class CarController : MonoBehaviour
             rearLeftCollider.motorTorque = moveInput * maxMotorTorque;
             rearRightCollider.motorTorque = moveInput * maxMotorTorque;
         } 
+   
+       rearLeftCollider.brakeTorque = breakInput * brakeforce; 
+       rearRightCollider.brakeTorque = breakInput * brakeforce;
         
-        
-        if (breakInput == 0)
-        {
-            rearLeftCollider.brakeTorque = 0;
-            rearRightCollider.brakeTorque = 0;
-        }
-        else
-        {
-            rearLeftCollider.brakeTorque = breakInput * brakeforce;
-            rearRightCollider.brakeTorque = breakInput * brakeforce;
-        }
         float steering = steerInput * maxSteeringAngle;
         frontLeftCollider.steerAngle = steering;
         frontRightCollider.steerAngle = steering;

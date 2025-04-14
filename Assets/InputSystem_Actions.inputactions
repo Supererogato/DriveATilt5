@@ -109,18 +109,7 @@
                 {
                     "name": "",
                     "id": "978bfe49-cc26-4a3d-ab7b-7d7a29327403",
-                    "path": "<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/stick/down",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Gas",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "aab93022-2aef-4f47-b70a-a0158327cd46",
-                    "path": "<Joystick>/stick/down",
+                    "path": "<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/stick/y",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -374,6 +363,17 @@
                     "name": "",
                     "id": "008f220b-d810-4d8e-a3b9-55e4b0388e98",
                     "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Brack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8a9418d3-b0c6-4215-88d2-60367c6adc2d",
+                    "path": "/Logitech G920 Driving Force Racing Wheel for Xbox One/z",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
