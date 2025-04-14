@@ -582,7 +582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &310692703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -590,7 +590,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 310692702}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c23c9fc1a6249484e93805b03f4e9edf, type: 3}
   m_Name: 
@@ -2252,7 +2252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7495443279060062592, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
       propertyPath: m_Constraints
-      value: 80
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1016151393840242557, guid: 133308cdb8794744caaef026bde9e1f0, type: 3}
@@ -2328,7 +2328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 065d42ea6e5a11947a22c7c51da177b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxMotorTorque: 10
+  maxMotorTorque: 1000
   maxSteeringAngle: 100
   brakeforce: 3000
   frontLeftCollider: {fileID: 1762982817}
@@ -2339,6 +2339,7 @@ MonoBehaviour:
   frontRightWheel: {fileID: 1762982812}
   rearLeftWheel: {fileID: 1762982811}
   rearRightWheel: {fileID: 1762982810}
+  gas: 
   wheelAction: {fileID: -4292351051939612494, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   gasAction: {fileID: -1680190386980627800, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   breakAction: {fileID: -1738935285651406324, guid: 052faaac586de48259a63d0c4782560b, type: 3}
@@ -23926,8 +23927,8 @@ Transform:
   m_GameObject: {fileID: 3335714281566818803}
   serializedVersion: 2
   m_LocalRotation: {x: 0.3812469, y: -0.38191423, z: 0.5955379, w: 0.5950857}
-  m_LocalPosition: {x: 0.10916689, y: 0.055946335, z: -2.400701}
-  m_LocalScale: {x: 0.99999976, y: 0.99999934, z: 0.99999934}
+  m_LocalPosition: {x: 0.0496, y: 0.0559, z: -2.4008}
+  m_LocalScale: {x: 0.99999976, y: -0.8522753, z: 0.99999934}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1994834996262675777}
