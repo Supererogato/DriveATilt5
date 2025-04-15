@@ -2328,7 +2328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 065d42ea6e5a11947a22c7c51da177b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxMotorTorque: 1000
+  maxMotorTorque: 10000
   maxSteeringAngle: 100
   brakeforce: 3000
   frontLeftCollider: {fileID: 1762982817}
