@@ -17,7 +17,8 @@ public class FollowTarget : MonoBehaviour
 
     private void Update()
     {
-        transform.position = playerTransform.position;
+        // transform.position = playerTransform.position;
+        transform.position = playerTransform.forward;
         //transform.rotation = playerTransform.rotation * rotationOffset;
     }
 }
