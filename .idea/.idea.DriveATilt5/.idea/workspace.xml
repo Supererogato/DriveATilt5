@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="80cffa3f-d19b-43ab-bd28-050b5d5c9d0f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DriveATilt5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DriveATilt5/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DrivingATilt5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DrivingATilt5/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Driving stuff/Scene/ProtoScene - nate.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Driving stuff/Scene/ProtoScene - nate.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem_Actions.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scipt/CarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scipt/CarController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scipt/FollowTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scipt/FollowTarget.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +15,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -90,13 +86,24 @@
       <workItem from="1743544940339" duration="12000" />
       <workItem from="1744216527578" duration="580000" />
       <workItem from="1744549729972" duration="4449000" />
-      <workItem from="1744664700556" duration="2773000" />
+      <workItem from="1744664700556" duration="3310000" />
+      <workItem from="1744753258600" duration="2259000" />
     </task>
+    <task id="LOCAL-00001" summary="code fixing">
+      <option name="closed" value="true" />
+      <created>1744667929548</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1744667929548</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityProjectDiscoverer">
     <option name="hasUnityReference" value="true" />
@@ -107,5 +114,7 @@
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="code fixing" />
+    <option name="LAST_COMMIT_MESSAGE" value="code fixing" />
   </component>
 </project>
