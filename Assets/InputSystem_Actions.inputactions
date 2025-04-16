@@ -103,6 +103,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Reset",
+                    "type": "Button",
+                    "id": "a6e9297e-0e48-404b-bc08-f9f4bbd09b84",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -378,6 +387,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Brack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "063db909-2fcd-4415-8ccb-bf8d7c4fca1e",
+                    "path": "<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/button2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Reset",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
