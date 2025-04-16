@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class CarController : MonoBehaviour
 {   
@@ -9,8 +10,8 @@ public class CarController : MonoBehaviour
     public WheelCollider frontLeftCollider, frontRightCollider, rearLeftCollider, rearRightCollider;
     public Transform frontLeftWheel, frontRightWheel, rearLeftWheel, rearRightWheel;
     private Rigidbody rb;
-    private MeshCollider mCollider;
-    public string gas;
+    public string sceneNameToLoad;
+    public InputActionReference resetAction;
     public InputActionReference wheelAction;
     public InputActionReference gasAction;
     public InputActionReference breakAction;
@@ -20,11 +21,12 @@ public class CarController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.centerOfMass = new Vector3(0.0f, -.5f, 0.0f);
-        mCollider = GetComponent<MeshCollider>();
         wheelAction.action.Enable();
         gasAction.action.Enable();
         breakAction.action.Enable();
         reverseAction.action.Enable();
+        resetAction.action.Enable();
+        
     }
 
     // Update is called once per frame
@@ -40,6 +42,7 @@ public class CarController : MonoBehaviour
         float moveInput = gasAction.action.ReadValue<float>();
         float breakInput = breakAction.action.ReadValue<float>();
         float reverseInput = reverseAction.action.ReadValue<float>();
+        float resetInput = resetAction.action.ReadValue<float>();
         moveInput = Mathf.Lerp(0, 5, moveInput);
         breakInput = Mathf.Lerp(5, 0, breakInput);
        
@@ -60,6 +63,11 @@ public class CarController : MonoBehaviour
         float steering = steerInput * maxSteeringAngle;
         frontLeftCollider.steerAngle = steering;
         frontRightCollider.steerAngle = steering;
+
+        if (resetInput == 1)
+        {
+            SceneManager.LoadScene(sceneNameToLoad);
+        }
     }
 
     void UpdateWheels()
