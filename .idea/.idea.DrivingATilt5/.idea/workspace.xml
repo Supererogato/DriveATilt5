@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bb4869bb-fd6d-446c-925a-a49621a336ce" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DrivingATilt5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DrivingATilt5/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EthanFolder/Scenes/ProtoScene - Ethan.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EthanFolder/Scenes/ProtoScene - Ethan.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scipt/FollowTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scipt/FollowTarget.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +74,7 @@
       <workItem from="1742840020261" duration="10000" />
       <workItem from="1743617968307" duration="117000" />
       <workItem from="1744216769684" duration="1441000" />
-      <workItem from="1744753614674" duration="235000" />
+      <workItem from="1744753614674" duration="1926000" />
     </task>
     <servers />
   </component>

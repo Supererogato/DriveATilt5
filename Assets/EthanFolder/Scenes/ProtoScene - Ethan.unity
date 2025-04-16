@@ -795,7 +795,7 @@ Transform:
   m_GameObject: {fileID: 811611428}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -160.79239, y: -139.66151, z: 134.88805}
+  m_LocalPosition: {x: -162.66, y: -140.44, z: 134.88805}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -887,7 +887,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1296495008
 Transform:
   m_ObjectHideFlags: 0
@@ -1160,15 +1160,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6132178175923897642, guid: ac17611f933f2524b8ee0a5036ffd429, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 38.633972
+      value: 2.92
       objectReference: {fileID: 0}
     - target: {fileID: 6132178175923897642, guid: ac17611f933f2524b8ee0a5036ffd429, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -40.391068
+      value: 6.36
       objectReference: {fileID: 0}
     - target: {fileID: 6132178175923897642, guid: ac17611f933f2524b8ee0a5036ffd429, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -154.44804
+      value: -5.93
       objectReference: {fileID: 0}
     - target: {fileID: 6132178175923897642, guid: ac17611f933f2524b8ee0a5036ffd429, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1208,7 +1208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7483436292649545910, guid: ac17611f933f2524b8ee0a5036ffd429, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1279,9 +1279,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 065d42ea6e5a11947a22c7c51da177b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxMotorTorque: 100
-  maxSteeringAngle: 75
-  brakeforce: 3000
+  maxMotorTorque: 10000
+  maxSteeringAngle: 100
+  brakeforce: 3.402823e+38
   frontLeftCollider: {fileID: 2716459195377812254}
   frontRightCollider: {fileID: 4795950752037048825}
   rearLeftCollider: {fileID: 3145262461961959020}
@@ -31767,7 +31767,7 @@ Transform:
   m_GameObject: {fileID: 3361322173912605300}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -148.22, y: -182.25, z: 67.102}
+  m_LocalPosition: {x: -148.22, y: -182.56, z: 67.102}
   m_LocalScale: {x: 32.46564, y: 32.46564, z: 32.46564}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -33649,7 +33649,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3311311801587749130}
   serializedVersion: 4
-  m_Mass: 1000
+  m_Mass: 400
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -33666,7 +33666,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!4 &7509413012985803725
 Transform:
