@@ -93,7 +93,7 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Brack",
@@ -102,7 +102,7 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Reset",
@@ -118,7 +118,7 @@
                 {
                     "name": "",
                     "id": "978bfe49-cc26-4a3d-ab7b-7d7a29327403",
-                    "path": "<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/stick/y",
+                    "path": "<Joystick>/stick/y",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -361,6 +361,17 @@
                     "name": "",
                     "id": "f23f01ab-732f-44eb-a63e-bd8984aebf2f",
                     "path": "<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/button5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Switch Direction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "16286b76-bc7f-43ac-a20b-046614edbaaa",
+                    "path": "<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/hat/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

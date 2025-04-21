@@ -5,8 +5,11 @@ using UnityEngine.SceneManagement;
 public class CarController : MonoBehaviour
 {   
     public float maxMotorTorque = 1500f;
+    public float acceleration = 1500f;
     public float maxSteeringAngle = 100f;
     public float brakeforce = 3000f;
+    public float maxspeed = 100f;
+    public float drag = 0.5f;
     public WheelCollider frontLeftCollider, frontRightCollider, rearLeftCollider, rearRightCollider;
     public Transform frontLeftWheel, frontRightWheel, rearLeftWheel, rearRightWheel;
     private Rigidbody rb;
@@ -16,6 +19,8 @@ public class CarController : MonoBehaviour
     public InputActionReference gasAction;
     public InputActionReference breakAction;
     public InputActionReference reverseAction;
+    
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,14 +31,19 @@ public class CarController : MonoBehaviour
         breakAction.action.Enable();
         reverseAction.action.Enable();
         resetAction.action.Enable();
+        rb.linearDamping = drag;
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        HandleInput();
         UpdateWheels();
+    }
+
+    void FixedUpdate()
+    {
+        HandleInput();
     }
 
     void HandleInput()
@@ -45,24 +55,27 @@ public class CarController : MonoBehaviour
         float resetInput = resetAction.action.ReadValue<float>();
         moveInput = Mathf.Lerp(0, 5, moveInput);
         breakInput = Mathf.Lerp(5, 0, breakInput);
-       
+        reverseInput = Mathf.Lerp(0, 5, reverseInput);
+
         if (reverseInput != 0)
         {
-            rearLeftCollider.motorTorque = moveInput * -maxMotorTorque;
-            rearRightCollider.motorTorque = moveInput * -maxMotorTorque;
+            rearLeftCollider.motorTorque = reverseInput * -maxMotorTorque; 
+            rearRightCollider.motorTorque = reverseInput * -maxMotorTorque;
         }
         else
         {
-            rearLeftCollider.motorTorque = moveInput * maxMotorTorque;
-            rearRightCollider.motorTorque = moveInput * maxMotorTorque;
-        } 
+            if (rb.linearVelocity.magnitude < maxspeed)
+            {
+                rb.AddForce(transform.forward * moveInput * acceleration * Time.fixedDeltaTime);
+            }
+        }
    
-       rearLeftCollider.brakeTorque = breakInput * brakeforce; 
-       rearRightCollider.brakeTorque = breakInput * brakeforce;
+        rearLeftCollider.brakeTorque = breakInput * brakeforce; 
+        rearRightCollider.brakeTorque = breakInput * brakeforce;
         
-        float steering = steerInput * maxSteeringAngle;
-        frontLeftCollider.steerAngle = steering;
-        frontRightCollider.steerAngle = steering;
+        float steering = steerInput;
+        frontLeftCollider.steerAngle = steering * maxSteeringAngle;
+        frontRightCollider.steerAngle = steering * maxSteeringAngle;
 
         if (resetInput == 1)
         {
