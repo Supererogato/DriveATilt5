@@ -5,11 +5,9 @@ using UnityEngine.SceneManagement;
 public class CarController : MonoBehaviour
 {   
     public float maxMotorTorque = 1500f;
-    public float acceleration = 1500f;
     public float maxSteeringAngle = 100f;
     public float brakeforce = 3000f;
-    public float maxspeed = 100f;
-    public float drag = 0.5f;
+    public float drag = 0.2f;
     public WheelCollider frontLeftCollider, frontRightCollider, rearLeftCollider, rearRightCollider;
     public Transform frontLeftWheel, frontRightWheel, rearLeftWheel, rearRightWheel;
     private Rigidbody rb;
@@ -39,6 +37,7 @@ public class CarController : MonoBehaviour
     void Update()
     {
         UpdateWheels();
+        
     }
 
     void FixedUpdate()
@@ -53,9 +52,9 @@ public class CarController : MonoBehaviour
         float breakInput = breakAction.action.ReadValue<float>();
         float reverseInput = reverseAction.action.ReadValue<float>();
         float resetInput = resetAction.action.ReadValue<float>();
-        moveInput = Mathf.Lerp(0, 5, moveInput);
+        moveInput = Mathf.Lerp(0, 1, moveInput);
         breakInput = Mathf.Lerp(5, 0, breakInput);
-        reverseInput = Mathf.Lerp(0, 5, reverseInput);
+        reverseInput = Mathf.Lerp(0, 3, reverseInput);
 
         if (reverseInput != 0)
         {
@@ -64,11 +63,10 @@ public class CarController : MonoBehaviour
         }
         else
         {
-            if (rb.linearVelocity.magnitude < maxspeed)
-            {
-                rb.AddForce(transform.forward * moveInput * acceleration * Time.fixedDeltaTime);
-            }
+            rearLeftCollider.motorTorque = moveInput * maxMotorTorque; 
+            rearRightCollider.motorTorque = moveInput * maxMotorTorque;
         }
+        
    
         rearLeftCollider.brakeTorque = breakInput * brakeforce; 
         rearRightCollider.brakeTorque = breakInput * brakeforce;
